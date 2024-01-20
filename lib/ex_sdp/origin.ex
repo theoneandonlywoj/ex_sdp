@@ -84,7 +84,7 @@ defmodule ExSDP.Origin do
       [_username, _sess_id, _sess_version, _nettype, _addrtype, _] = values ->
         {:ok, values}
 
-      [username, sess_id, sess_version, nettype, _, addrtype, address] ->
+      [username, sess_id, sess_version, _, nettype, addrtype, address] ->
         {:ok, [username, sess_id, sess_version, nettype, addrtype, address]}
 
       _ ->
